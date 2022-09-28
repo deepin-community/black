@@ -1,0 +1,7 @@
+Tests: testsuite
+Depends: @, python3, python3-recommonmark,
+ python3-sphinx, python3-docutils,
+ python3-appdirs, python3-attr, python3-click, python3-toml,
+ python3-aiohttp, dpkg-dev, python3-pytest,
+ python3-parameterized, python3-aiohttp-cors, python3-typed-ast,
+Restrictions: allow-stderr

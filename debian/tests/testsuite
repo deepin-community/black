@@ -1,0 +1,27 @@
+#!/bin/bash
+
+set -e -v
+
+DEB_HOST_ARCH=$(dpkg-architecture -qDEB_HOST_ARCH)
+VERSION=$(dpkg-parsechangelog|grep ^Version|awk '{print $2}'|cut -d- -f1)
+
+function runtest() {
+  cp -v setup.py "$AUTOPKGTEST_TMP"
+  cp -vr tests "$AUTOPKGTEST_TMP"
+  mkdir -p "${AUTOPKGTEST_TMP}/src/black"
+  cp -vr src/black/__init__.py "${AUTOPKGTEST_TMP}/src/black"
+  cp -vr src/blib2to3 "${AUTOPKGTEST_TMP}/src"
+  
+  for py in $(py3versions -r 2>/dev/null);
+  do
+      cd "$AUTOPKGTEST_TMP"
+      echo "Testing with $py:"
+      $py -m pytest -v  -k 'not test_process_queue'
+  done
+}
+
+if [ "$DEB_HOST_ARCH" == "amd64" ]; then
+    runtest
+else
+    echo "Skip the test execution on $DEB_HOST_ARCH"
+fi
