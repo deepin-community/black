@@ -1,0 +1,21 @@
+From: =?utf-8?q?Timo_R=C3=B6hling?= <roehling@debian.org>
+Date: Fri, 7 Oct 2022 21:54:59 +0200
+Subject: Workaround for Bug #1021410
+
+---
+ pyproject.toml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pyproject.toml b/pyproject.toml
+index d0d2e4f..25be3c7 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -67,7 +67,7 @@ dependencies = [
+   "mypy_extensions>=0.4.3",
+   "pathspec>=0.9.0",
+   "platformdirs>=2",
+-  "tomli>=1.1.0; python_full_version < '3.11.0a7'",
++  "tomli>=1.1.0; python_version < '3.11'",
+   "typed-ast>=1.4.2; python_version < '3.8' and implementation_name == 'cpython'",
+   "typing_extensions>=3.10.0.0; python_version < '3.10'",
+ ]

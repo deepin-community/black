@@ -1,9 +1,9 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: black
-Source: https://github.com/ambv/black
+Source: https://github.com/psf/black
 
 Files: *
-Copyright: 2018 Åukasz Langa
+Copyright: 2018-2022, Łukasz Langa
     Anthony Sottile <asottile@umich.edu>
     Carol Willing <carolcode@willingconsulting.com>
     Carl Meyer <carl@oddbird.net>
@@ -27,13 +27,13 @@ Copyright: 2018 Åukasz Langa
     Stavros Korokithakis <hi@stavros.io>
     Sunil Kapil <snlkapil@gmail.com>
     Vishwas B Sharma <sharma.vishwas88@gmail.com>
-License: MIT
+License: Expat
 
 Files: debian/*
-Copyright: 2018 Neil Williams <codehelp@debian.org>
-License: MIT
+Copyright: 2018-2021, Neil Williams <codehelp@debian.org>
+License: Expat
 
-License: MIT
+License: Expat
  Permission is hereby granted, free of charge, to any person obtaining a
  copy of this software and associated documentation files (the "Software"),
  to deal in the Software without restriction, including without limitation
