@@ -1,0 +1,78 @@
+From: Debian Python Team <team+python@tracker.debian.org>
+Date: Sat, 30 Jul 2022 22:19:43 +0200
+Subject: disable_myst_parser
+
+Remove privacy-breach links and self-host docs
+
+Remove tracking URLs from the README and sidebar of pages
+in the documentation.
+---
+ docs/conf.py | 24 +++++++++++++-----------
+ 1 file changed, 13 insertions(+), 11 deletions(-)
+
+diff --git a/docs/conf.py b/docs/conf.py
+index 7fc4f8f..61ea71a 100644
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -19,6 +19,8 @@ from pathlib import Path
+ 
+ from pkg_resources import get_distribution
+ 
++from _black_version import version as __version__
++
+ CURRENT_DIR = Path(__file__).parent
+ 
+ 
+@@ -43,7 +45,7 @@ author = "Łukasz Langa and contributors to Black"
+ 
+ # Autopopulate version
+ # The version, including alpha/beta/rc tags, but not commit hash and datestamps
+-release = get_distribution("black").version.split("+")[0]
++release = __version__
+ # The short X.Y version.
+ version = release
+ for sp in "abcfr":
+@@ -64,13 +66,13 @@ extensions = [
+     "sphinx.ext.autodoc",
+     "sphinx.ext.intersphinx",
+     "sphinx.ext.napoleon",
+-    "myst_parser",
++#    "myst_parser",
+     "sphinxcontrib.programoutput",
+     "sphinx_copybutton",
+ ]
+ 
+ # If you need extensions of a certain version or higher, list them here.
+-needs_extensions = {"myst_parser": "0.13.7"}
++# needs_extensions = {"myst_parser": "0.13.7"}
+ 
+ # Add any paths that contain templates here, relative to this directory.
+ templates_path = ["_templates"]
+@@ -100,19 +102,19 @@ pygments_style = "sphinx"
+ 
+ # We need headers to be linkable to so ask MyST-Parser to autogenerate anchor IDs for
+ # headers up to and including level 3.
+-myst_heading_anchors = 3
++# myst_heading_anchors = 3
+ 
+ # Prettier support formatting some MyST syntax but not all, so let's disable the
+ # unsupported yet still enabled by default ones.
+-myst_disable_syntax = [
+-    "colon_fence",
+-    "myst_block_break",
+-    "myst_line_comment",
+-    "math_block",
+-]
++#myst_disable_syntax = [
++#    "colon_fence",
++#    "myst_block_break",
++#    "myst_line_comment",
++#    "math_block",
++#]
+ 
+ # Optional MyST Syntaxes
+-myst_enable_extensions = []
++#myst_enable_extensions = []
+ 
+ # -- Options for HTML output -------------------------------------------------
+ 

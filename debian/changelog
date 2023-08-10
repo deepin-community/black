@@ -1,3 +1,90 @@
+black (22.10.0-2) unstable; urgency=medium
+
+  * Team upload
+  * d/control: Remove unused dependency on python3-typed-ast
+    This dependency is only required for Python < 3.8.
+
+ -- Sebastian Ramacher <sramacher@debian.org>  Thu, 13 Oct 2022 23:14:35 +0200
+
+black (22.10.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+
+  [ Timo Röhling ]
+  * New upstream version 22.10.0
+
+ -- Timo Röhling <roehling@debian.org>  Fri, 07 Oct 2022 21:32:44 +0200
+
+black (22.8.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 22.8.0
+
+ -- Timo Röhling <roehling@debian.org>  Mon, 05 Sep 2022 18:12:46 +0200
+
+black (22.6.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add bash completion.
+    Thanks to Hans-Christoph Steiner (Closes: #968043)
+  * Skip blackd tests
+
+ -- Timo Röhling <roehling@debian.org>  Sat, 06 Aug 2022 20:41:25 +0200
+
+black (22.6.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Modernize and simplify packaging
+  * New upstream version 22.6.0
+  * Bump Standards-Version to 4.6.1
+
+ -- Timo Röhling <roehling@debian.org>  Sat, 30 Jul 2022 23:05:32 +0200
+
+black (22.3.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 05 Apr 2022 09:28:05 +0200
+
+black (22.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 01 Mar 2022 10:20:37 +0100
+
+black (21.12b0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Add myself to Uploaders.
+  * Specify Rules-Requires-Root: no.
+
+ -- Chris Lamb <lamby@debian.org>  Fri, 28 Jan 2022 08:05:31 -0800
+
+black (21.10b0-1) unstable; urgency=medium
+
+  [ Neil Williams ]
+  * Prepare for upload
+
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on python3-regex.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.0, no changes needed.
+
+  [ Neil Williams ]
+  * Update homepage links for new location to avoid the redirect.
+  * Bump debhelper from old 12 to 13.
+  * Update B-D for upstream changes
+  * Fix autopkgtest support for new upstream
+  * Allow autopkgtest on all architectures (Closes: #995344)
+  * New upstream release (Closes: #966141)
+
+ -- Neil Williams <codehelp@debian.org>  Mon, 15 Nov 2021 20:15:11 +0000
+
 black (21.4b2-3) unstable; urgency=medium
 
   * Remove Sphinxdoc built-using as only symlinks are required.

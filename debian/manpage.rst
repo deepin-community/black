@@ -1,10 +1,10 @@
 :Version: 21.4b2
 :Date: 2021-10-10
-:Copyright: 2018 Åukasz Langa
+:Copyright: 2018 Łukasz Langa
 :Title: black
 :Subtitle: uncompromising Python code formatter
 :Manual group: uncompromising Python code formatter
-:Manual section: "black" "1"
+:Manual section: "1"
 
 Summary
 #######

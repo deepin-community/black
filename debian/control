@@ -1,27 +1,48 @@
 Source: black
-Section: python
-Priority: optional
 Maintainer: Debian Python Team <team+python@tracker.debian.org>
 Uploaders: Neil Williams <codehelp@debian.org>,
- Sylvestre Ledru <sylvestre@debian.org>
-Build-Depends: debhelper-compat (= 12), dh-python,
- python3-all:any, python3-recommonmark, python3-setuptools,
- python3-appdirs, python3-attr, python3-click,
- python3-toml, python3-sphinx (>= 3.2), python3-recommonmark,
- python3-docutils,
- libjs-underscore, libjs-jquery, python3-setuptools-scm,
- python3-pathspec, python3-regex (>= 0.1.202018), python3-typed-ast,
- python3-aiohttp, python3-aiohttp-cors,
- python3-mypy-extensions, python3-typing-extensions
-Standards-Version: 4.4.1
-Homepage: https://github.com/ambv/black
-X-Python3-Version: >= 3.6
-Vcs-Git: https://salsa.debian.org/python-team/packages/black.git
+           Sylvestre Ledru <sylvestre@debian.org>,
+           Chris Lamb <lamby@debian.org>,
+Section: python
+Priority: optional
+Build-Depends:
+ debhelper-compat (= 13),
+ bash-completion,
+ dh-python,
+ dh-sequence-python3,
+ dh-sequence-sphinxdoc <!nodoc>,
+ libjs-jquery <!nodoc>,
+ libjs-underscore <!nodoc>,
+ pybuild-plugin-pyproject,
+ python3-aiohttp <!nocheck>,
+ python3-all,
+ python3-click,
+ python3-hatch-vcs,
+ python3-hatchling,
+ python3-mypy-extensions,
+ python3-pathspec,
+ python3-platformdirs,
+ python3-pytest <!nocheck>,
+ python3-regex,
+ python3-setuptools,
+ python3-setuptools-scm,
+ python3-sphinx (>= 3.2) <!nodoc>,
+ python3-sphinx-copybutton (>= 0.4.0-2) <!nodoc>,
+ python3-sphinxcontrib.programoutput <!nodoc>,
+ python3-tomli,
+ python3-typing-extensions,
+Standards-Version: 4.6.1
 Vcs-Browser: https://salsa.debian.org/python-team/packages/black
+Vcs-Git: https://salsa.debian.org/python-team/packages/black.git
+Homepage: https://github.com/psf/black
+X-Python3-Version: >= 3.6
+Rules-Requires-Root: no
 
 Package: black
 Architecture: all
-Depends: python3-pkg-resources, ${python3:Depends}, ${misc:Depends}
+Depends: python3-pkg-resources,
+         ${python3:Depends},
+         ${misc:Depends}
 Suggests: python-black-doc
 Description: uncompromising Python code formatter (Python 3)
  Black is the uncompromising Python code formatter. By using it, you
@@ -39,9 +60,10 @@ Description: uncompromising Python code formatter (Python 3)
 
 Package: python-black-doc
 Architecture: all
-Section: doc
 Multi-Arch: foreign
-Depends: ${sphinxdoc:Depends}, ${misc:Depends}
+Section: doc
+Depends: ${sphinxdoc:Depends},
+         ${misc:Depends}
 Description: uncompromising Python code formatter (common documentation)
  Black is the uncompromising Python code formatter. This package contains
  the documentation for applying black to your code.

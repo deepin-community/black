@@ -1,2 +1,4 @@
-privacy-docs.diff
-version-declaration.diff
+disable_myst_parser.patch
+disable-furo-theme.diff
+no_fancy_pypi_readme.patch
+dh_python_version_number_workaround.patch
