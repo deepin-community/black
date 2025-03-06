@@ -1,0 +1,11 @@
+Author: Michael R. Crusoe <crusoe@debian.org>
+Description: Link to the packaged Python3 docs
+Forwarded: not-needed
+--- black.orig/docs/conf.py
++++ black/docs/conf.py
+@@ -238,4 +238,4 @@
+ # -- Options for intersphinx extension ---------------------------------------
+ 
+ # Example configuration for intersphinx: refer to the Python standard library.
+-intersphinx_mapping = {"<name>": ("https://docs.python.org/3/", None)}
++intersphinx_mapping = {"<name>": ("/usr/share/doc/python3/html/", None)}

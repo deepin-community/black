@@ -2,6 +2,10 @@
 
 export BUILD_DATE=$(shell LC_ALL=C date -u "+%B %d, %Y" -d @"$(SOURCE_DATE_EPOCH)")
 export PYBUILD_DESTDIR=debian/black/
+export PYBUILD_TEST_ARGS=--run-optional no_jupyter,no_blackd -k "not (incompatible_with_mypyc)"
+export PYBUILD_BUILD_ARGS=--verbose
+export HATCH_BUILD_HOOKS_ENABLE=1
+export HATCH_VERBOSE=3
 
 %:
 	dh $@ --buildsystem=pybuild --with bash-completion
@@ -15,5 +19,3 @@ execute_after_dh_auto_install:
 execute_before_dh_installman:
 	rst2man debian/manpage.rst > debian/black.1
 	rst2man debian/manpage2.rst > debian/black-primer.1
-
-override_dh_auto_test:

@@ -1,0 +1,14 @@
+Author: Michael R. Crusoe <crusoe@debian.org>
+Description: Verbose mypyc, and produce debugging symbols
+Forwarded: not-needed
+--- black.orig/pyproject.toml
++++ black/pyproject.toml
+@@ -145,7 +145,7 @@
+   "/src/black/__main__.py",
+ ]
+ mypy-args = ["--ignore-missing-imports"]
+-options = { debug_level = "0" }
++options = { debug_level = "2", verbose = true }
+ 
+ [tool.cibuildwheel]
+ build-verbosity = 1

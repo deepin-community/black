@@ -1,0 +1,53 @@
+Author: Michael R. Crusoe <crusoe@debian.org>
+Description: Preserve privacy by removing remote images
+Forwarded: not-needed
+--- black.orig/README.md
++++ black/README.md
+@@ -3,14 +3,14 @@
+ <h2 align="center">The Uncompromising Code Formatter</h2>
+ 
+ <p align="center">
+-<a href="https://github.com/psf/black/actions"><img alt="Actions Status" src="https://github.com/psf/black/workflows/Test/badge.svg"></a>
+-<a href="https://black.readthedocs.io/en/stable/?badge=stable"><img alt="Documentation Status" src="https://readthedocs.org/projects/black/badge/?version=stable"></a>
+-<a href="https://coveralls.io/github/psf/black?branch=main"><img alt="Coverage Status" src="https://coveralls.io/repos/github/psf/black/badge.svg?branch=main"></a>
+-<a href="https://github.com/psf/black/blob/main/LICENSE"><img alt="License: MIT" src="https://black.readthedocs.io/en/stable/_static/license.svg"></a>
+-<a href="https://pypi.org/project/black/"><img alt="PyPI" src="https://img.shields.io/pypi/v/black"></a>
+-<a href="https://pepy.tech/project/black"><img alt="Downloads" src="https://static.pepy.tech/badge/black"></a>
+-<a href="https://anaconda.org/conda-forge/black/"><img alt="conda-forge" src="https://img.shields.io/conda/dn/conda-forge/black.svg?label=conda-forge"></a>
+-<a href="https://github.com/psf/black"><img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg"></a>
++<a href="https://github.com/psf/black/actions">Actions Status</a>
++<a href="https://black.readthedocs.io/en/stable/?badge=stable">Documentation Status</a>
++<a href="https://coveralls.io/github/psf/black?branch=main">Coverage Status</a>
++<a href="https://github.com/psf/black/blob/main/LICENSE">License: MIT</a>
++<a href="https://pypi.org/project/black/">PyPI</a>
++<a href="https://pepy.tech/project/black">Downloads</a>
++<a href="https://anaconda.org/conda-forge/black/">conda-forge</a>
++<a href="https://github.com/psf/black">Code style: black</a>
+ </p>
+ 
+ > “Any color you like.”
+@@ -185,9 +185,6 @@
+     :target: https://github.com/psf/black
+ ```
+ 
+-Looks like this:
+-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+-
+ ## License
+ 
+ MIT
+--- black.orig/docs/index.md
++++ black/docs/index.md
+@@ -79,12 +79,6 @@
+    :target: https://github.com/psf/black
+ ```
+ 
+-Looks like this:
+-
+-```{image} https://img.shields.io/badge/code%20style-black-000000.svg
+-:target: https://github.com/psf/black
+-```
+-
+ ## Contents
+ 
+ ```{toctree}

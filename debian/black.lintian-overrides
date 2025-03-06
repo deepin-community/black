@@ -1,0 +1,2 @@
+# consequence of using mypyc
+black: shared-library-lacks-prerequisites [usr/lib/python3/dist-packages/*.so]

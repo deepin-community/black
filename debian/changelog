@@ -1,3 +1,173 @@
+black (25.1.0-2) unstable; urgency=medium
+
+  [ Peter Pentchev ]
+  * Team upload.
+  * Add the upstream click-mix-stderr patch for click 8.2.0.
+
+  [ Michael R. Crusoe ]
+  * Adjust the click 8.2.0 patch to enable the tests to pass.
+    Closes: #1098535
+  * Standards-Version: 4.7.2 (routine-update)
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Thu, 27 Feb 2025 15:54:19 +0100
+
+black (25.1.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Wed, 05 Feb 2025 09:23:24 +0100
+
+black (25.1.0-0exp) experimental; urgency=medium
+
+  * New upstream version, upload to experimental.
+  * Patches, dropped fix-type-error.patch as it was applied upstream.
+    Refreshed verbose-mypyc.
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Wed, 29 Jan 2025 14:35:48 +0100
+
+black (24.10.0-3) unstable; urgency=medium
+
+  * Team upload.
+  * Remove dependency on python3-pkg-resources (Closes: #1083315)
+
+ -- Alexandre Detiste <tchet@debian.org>  Mon, 13 Jan 2025 20:40:14 +0100
+
+black (24.10.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Fix type error (closes: #1091135).
+
+ -- Colin Watson <cjwatson@debian.org>  Mon, 30 Dec 2024 00:48:10 +0000
+
+black (24.10.0-1) unstable; urgency=medium
+
+  [ Michael R. Crusoe ]
+  * d/patches/verbose-mypyc: set the debug level to the default of 2
+
+  [ Sylvestre Ledru ]
+  * New upstream release
+  * Update Standards-Version to 4.7.0
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 13 Oct 2024 23:26:13 +0200
+
+black (24.8.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version
+  * Refreshed patches.
+  * d/control: build the docs using upstream's preferred theme: furo.
+  * python3-hatch-fancy-pypi-readme & python3-myst-parser are available,
+    remove patches that worked around their previous absencse.
+  * Increased (mypyc) build verbosity and produce debug information
+  * Link the docs against the python3-doc package.
+  * Added patch to preserve privacy by removing external image
+    references.
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Sun, 04 Aug 2024 16:12:54 +0200
+
+black (24.4.2-2) unstable; urgency=medium
+
+  * Team upload.
+  * Compile Black using mypyc, as upstream does for PyPI. Closes: #1066036
+    Tests are now run at build time as well.
+  * Remove trailing whitespace in debian/copyright (routine-update)
+  * d/control: remove unneeded X-Python3-Version >= 3.6
+  * Remaining patches are Debian-specific and do not need forwarding
+    upstream.
+  * Use pybuild for the autopkgtest
+
+ -- Michael R. Crusoe <crusoe@debian.org>  Thu, 09 May 2024 19:18:06 +0200
+
+black (24.4.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 03 May 2024 10:45:25 +0200
+
+black (24.4.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Note that package Breaks python3-pylsp-black (<< 2.0.0-4)
+
+ -- Julian Gilbey <jdg@debian.org>  Fri, 19 Apr 2024 18:00:06 +0100
+
+black (24.4.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release, fixes CVE-2024-21503 (closes: #1067177)
+  * Drop defunct python3-typed-ast from autopkgtest dependencies
+    (closes: #1067466)
+  * Update Standards-Version (no changes needed)
+
+ -- Julian Gilbey <jdg@debian.org>  Fri, 19 Apr 2024 06:26:09 +0100
+
+black (24.2.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 15 Feb 2024 10:49:02 +0100
+
+black (24.1.1-1) unstable; urgency=medium
+
+  * new upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 11 Feb 2024 18:49:45 +0100
+
+black (23.11.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 19 Nov 2023 13:54:15 +0100
+
+black (23.10.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Wed, 25 Oct 2023 23:39:44 +0200
+
+black (23.10.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 20 Oct 2023 08:30:41 +0200
+
+black (23.9.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Thu, 28 Sep 2023 16:49:08 +0200
+
+black (23.7.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 21 Jul 2023 10:27:25 +0200
+
+black (23.3.0-1) unstable; urgency=medium
+
+  * upload to unstable
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Tue, 13 Jun 2023 13:53:20 +0200
+
+black (23.3.0-1~exp1) experimental; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sat, 10 Jun 2023 13:35:44 +0200
+
+black (23.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Fri, 10 Feb 2023 21:55:25 +0100
+
+black (22.12.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Sylvestre Ledru <sylvestre@debian.org>  Sun, 18 Dec 2022 00:43:45 +0100
+
 black (22.10.0-2) unstable; urgency=medium
 
   * Team upload
