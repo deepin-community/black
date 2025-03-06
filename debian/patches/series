@@ -1,4 +1,5 @@
-disable_myst_parser.patch
-disable-furo-theme.diff
-no_fancy_pypi_readme.patch
-dh_python_version_number_workaround.patch
+intersphinx
+verbose-mypyc
+docs_version.patch
+privacy
+click-mix-stderr.patch

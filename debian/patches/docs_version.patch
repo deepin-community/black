@@ -1,0 +1,29 @@
+From: Michael R. Crusoe <crusoe@debian.org>
+Date: Sat, 30 Jul 2022 22:19:43 +0200
+Subject: Setup the version differently when building the docs
+Forwarded: not-needed
+
+---
+ docs/conf.py | 24 +++++++++++++-----------
+ 1 file changed, 13 insertions(+), 11 deletions(-)
+
+--- black.orig/docs/conf.py
++++ black/docs/conf.py
+@@ -20,6 +20,8 @@
+ 
+ from sphinx.application import Sphinx
+ 
++from _black_version import version as __version__
++
+ CURRENT_DIR = Path(__file__).parent
+ 
+ 
+@@ -65,7 +67,7 @@
+ 
+ # Autopopulate version
+ # The version, including alpha/beta/rc tags, but not commit hash and datestamps
+-release = version("black").split("+")[0]
++release = __version__
+ # The short X.Y version.
+ version = release
+ for sp in "abcfr":

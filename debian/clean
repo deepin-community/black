@@ -4,3 +4,4 @@ docs/_build/
 docs/_static/pypi.svg
 src/_black_version.py
 src/black.egg-info/
+.mypy_cache/
