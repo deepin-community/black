@@ -1,3 +1,10 @@
+black (25.1.0-2deepin2) unstable; urgency=medium
+
+  * Fix CVE-2026-32274: Prevent path traversal in cache file via --
+    python-cell-magics option (backport from 26.3.1)
+
+ -- deepin-ci-robot <packages@deepin.org>  Wed, 20 May 2026 21:49:33 +0800
+
 black (25.1.0-2deepin1) unstable; urgency=medium
 
   * Fix CVE-2026-31900: Harden GitHub Action version parsing to reject
