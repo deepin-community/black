@@ -4,3 +4,4 @@ docs_version.patch
 privacy
 click-mix-stderr.patch
 CVE-2026-31900.patch
+CVE-2026-32274.patch
